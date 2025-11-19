@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전산세무2급 기출 이론문제 풀이</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 모든 회차 데이터 로드 -->
+    <script src="quiz_all_data.js"></script>
+    <div class="app-container">
+        <!-- 왼쪽 메뉴 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>전산세무2급</h2>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="menu-item active" onclick="showSection('home')">📚 홈</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(112)">112회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(113)">113회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(114)">114회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(115)">115회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(116)">116회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(117)">117회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(118)">118회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(119)">119회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(120)">120회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(121)">121회</a></li>
+                    <li><a href="#" class="menu-item" onclick="selectRound(122)">122회</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>기출문제</p>
+            </div>
+        </aside>
+
+        <!-- 오른쪽 콘텐츠 영역 -->
+        <main class="main-content">
+            <!-- 홈 섹션 -->
+            <section id="home-section" class="content-section active">
+                <div class="home-container">
+                    <div class="home-header">
+                        <h1>전산세무2급 기출문제</h1>
+                        <p class="home-subtitle">회차를 선택하여 학습을 시작하세요</p>
+                    </div>
+
+                    <div class="update-notice">
+                        <span class="notice-icon">📢</span>
+                        <span class="notice-text">123회, 124회 등 최신 회차가 순차적으로 업데이트될 예정입니다</span>
+                    </div>
+
+                    <div class="round-selection-grid">
+                        <button class="round-card" onclick="selectRound(112)">
+                            <div class="round-number">112회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(113)">
+                            <div class="round-number">113회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(114)">
+                            <div class="round-number">114회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(115)">
+                            <div class="round-number">115회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(116)">
+                            <div class="round-number">116회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(117)">
+                            <div class="round-number">117회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(118)">
+                            <div class="round-number">118회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(119)">
+                            <div class="round-number">119회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(120)">
+                            <div class="round-number">120회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(121)">
+                            <div class="round-number">121회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                        <button class="round-card" onclick="selectRound(122)">
+                            <div class="round-number">122회</div>
+                            <div class="round-info">15문제</div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 문제풀이 섹션 -->
+            <section id="quiz-section" class="content-section">
+                <div class="quiz-header">
+                    <h2 id="quiz-title">문제 풀이</h2>
+                    <div class="header-actions">
+                        <div class="score-display-header">
+                            <span>점수: <strong id="score">0</strong> / 30점</span>
+                        </div>
+                        <button class="restart-quiz-button" onclick="restartQuiz()" style="display: none;">🔄 다시 풀기</button>
+                    </div>
+                </div>
+                
+                <!-- 문제 번호 네비게이션 -->
+                <div id="question-nav" class="question-nav" style="display: none;">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+                
+                <div id="quiz-container" class="quiz-container">
+                    <div id="quiz-content">
+                        <div class="quiz-header-info">
+                            <div class="round-info">
+                                <span id="current-round"></span>
+                            </div>
+                        </div>
+                        <div id="question-text" class="question-text"></div>
+                        <div id="options-container" class="options-container"></div>
+                        
+                        <div class="action-buttons">
+                            <button id="check-button" class="check-button" onclick="checkAnswer()" disabled>정답 확인</button>
+                            <button id="next-button" class="next-button" onclick="nextQuestion()" style="display: none;">다음 문제</button>
+                        </div>
+                        
+                        <div id="result" class="result" style="display: none;"></div>
+                        <div id="explanation" class="explanation" style="display: none;">
+                            <div class="explanation-header">📝 해설</div>
+                            <div id="explanation-text" class="explanation-text"></div>
+                        </div>
+                    </div>
+                    <div id="final-result" class="final-result" style="display: none;"></div>
+                    <p class="info-text" id="select-round-message">왼쪽 메뉴에서 회차를 선택해주세요</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 커스텀 모달 -->
+    <div id="custom-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">알림</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-cancel" class="modal-btn modal-btn-cancel">취소</button>
+                <button id="modal-confirm" class="modal-btn modal-btn-confirm">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
