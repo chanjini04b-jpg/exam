@@ -407,3 +407,35 @@ function toggleMobileMenu() {
     
     overlay.classList.toggle('active');
 }
+
+// 정답 PDF 보기
+function viewAnswer(event, round) {
+    event.stopPropagation(); // 부모 버튼 클릭 방지
+    
+    const pdfModal = document.getElementById('pdf-modal');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    const pdfTitle = document.getElementById('pdf-title');
+    
+    pdfTitle.textContent = `${round}회 정답`;
+    pdfViewer.src = `anser/${round}A.pdf`;
+    pdfModal.style.display = 'flex';
+}
+
+// 정답 PDF 다운로드
+function downloadAnswer(event, round) {
+    event.stopPropagation(); // 부모 버튼 클릭 방지
+    
+    const link = document.createElement('a');
+    link.href = `anser/${round}A.pdf`;
+    link.download = `${round}회_정답.pdf`;
+    link.click();
+}
+
+// PDF 모달 닫기
+function closePdfModal() {
+    const pdfModal = document.getElementById('pdf-modal');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    
+    pdfModal.style.display = 'none';
+    pdfViewer.src = ''; // PDF 로드 중지
+}

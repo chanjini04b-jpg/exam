@@ -58,51 +58,95 @@
                         <span class="notice-text">123회, 124회 등 최신 회차가 순차적으로 업데이트될 예정입니다</span>
                     </div>
 
-                    <div class="round-selection-grid">
-                        <button class="round-card" onclick="selectRound(112)">
-                            <div class="round-number">112회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(113)">
-                            <div class="round-number">113회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(114)">
-                            <div class="round-number">114회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(115)">
-                            <div class="round-number">115회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(116)">
-                            <div class="round-number">116회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(117)">
-                            <div class="round-number">117회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(118)">
-                            <div class="round-number">118회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(119)">
-                            <div class="round-number">119회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(120)">
-                            <div class="round-number">120회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(121)">
-                            <div class="round-number">121회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
-                        <button class="round-card" onclick="selectRound(122)">
-                            <div class="round-number">122회</div>
-                            <div class="round-info">15문제</div>
-                        </button>
+                    <div class="round-list">
+                        <div class="round-item">
+                            <span class="round-label">112회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(112)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 112)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 112)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">113회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(113)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 113)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 113)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">114회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(114)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 114)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 114)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">115회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(115)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 115)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 115)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">116회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(116)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 116)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 116)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">117회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(117)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 117)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 117)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">118회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(118)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 118)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 118)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">119회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(119)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 119)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 119)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">120회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(120)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 120)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 120)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">121회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(121)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 121)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 121)">다운로드</button>
+                            </div>
+                        </div>
+                        <div class="round-item">
+                            <span class="round-label">122회</span>
+                            <div class="round-actions">
+                                <button class="action-btn primary" onclick="selectRound(122)">문제풀이</button>
+                                <button class="action-btn secondary" onclick="viewAnswer(event, 122)">보기</button>
+                                <button class="action-btn tertiary" onclick="downloadAnswer(event, 122)">다운로드</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -164,6 +208,19 @@
             <div class="modal-footer">
                 <button id="modal-cancel" class="modal-btn modal-btn-cancel">취소</button>
                 <button id="modal-confirm" class="modal-btn modal-btn-confirm">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF 뷰어 모달 -->
+    <div id="pdf-modal" class="modal" style="display: none;">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdf-title">정답 보기</h3>
+                <button class="pdf-close-btn" onclick="closePdfModal()">&times;</button>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
             </div>
         </div>
     </div>
