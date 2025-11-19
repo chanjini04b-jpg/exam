@@ -1395,7 +1395,12 @@ body {
     }
     
     .pdf-wrapper {
-        padding: 0.5rem;
+        padding: 0.3rem;
+        transform-origin: top left;
+    }
+    
+    #pdf-viewer {
+        max-width: none;
     }
     
     .answer-btn {
