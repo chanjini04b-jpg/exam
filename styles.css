@@ -1096,18 +1096,19 @@ body {
 
 .pdf-wrapper {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     transform-origin: top center;
     transition: transform 0.2s ease;
     padding: 1rem;
+    overflow: visible;
 }
 
 #pdf-viewer {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     border: none;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

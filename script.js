@@ -419,6 +419,16 @@ function viewAnswer(event, round) {
     pdfTitle.textContent = `${round}회 정답`;
     pdfViewer.src = `anser/${round}A.pdf`;
     pdfModal.style.display = 'flex';
+    
+    // 모바일 환경에서 자동으로 가로에 맞게 축소
+    setTimeout(() => {
+        if (window.innerWidth <= 768) {
+            currentZoom = 70; // 모바일에서 70%로 시작
+        } else {
+            currentZoom = 100; // 데스크톱에서 100%
+        }
+        updateZoom();
+    }, 100);
 }
 
 // 정답 PDF 다운로드
@@ -459,13 +469,19 @@ function zoomOut() {
 }
 
 function resetZoom() {
-    currentZoom = 100;
+    if (window.innerWidth <= 768) {
+        currentZoom = 70; // 모바일에서 70%
+    } else {
+        currentZoom = 100; // 데스크톱에서 100%
+    }
     updateZoom();
 }
 
 function updateZoom() {
     const pdfWrapper = document.getElementById('pdf-wrapper');
     const zoomLevel = document.getElementById('zoom-level');
-    pdfWrapper.style.transform = `scale(${currentZoom / 100})`;
-    zoomLevel.textContent = `${currentZoom}%`;
+    if (pdfWrapper && zoomLevel) {
+        pdfWrapper.style.transform = `scale(${currentZoom / 100})`;
+        zoomLevel.textContent = `${currentZoom}%`;
+    }
 }
