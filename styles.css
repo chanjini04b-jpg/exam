@@ -1194,27 +1194,28 @@ body {
     }
     
     .round-item {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 1rem;
-        gap: 0.8rem;
-    }
-    
-    .round-label {
-        font-size: 1.1rem;
-        min-width: auto;
-        text-align: center;
-    }
-    
-    .round-actions {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.8rem;
         gap: 0.5rem;
     }
     
+    .round-label {
+        font-size: 0.95rem;
+        min-width: 50px;
+        flex-shrink: 0;
+    }
+    
+    .round-actions {
+        flex-direction: row;
+        gap: 0.4rem;
+        flex: 1;
+    }
+    
     .action-btn {
-        width: 100%;
-        padding: 0.7rem 1rem;
-        font-size: 0.85rem;
+        flex: 1;
+        padding: 0.5rem 0.4rem;
+        font-size: 0.75rem;
     }
     
     /* 퀴즈 섹션 모바일 */
