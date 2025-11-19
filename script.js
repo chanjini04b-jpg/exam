@@ -423,7 +423,7 @@ function viewAnswer(event, round) {
     // 모바일 환경에서 자동으로 가로에 맞게 축소
     setTimeout(() => {
         if (window.innerWidth <= 768) {
-            currentZoom = 50; // 모바일에서 50%로 시작
+            currentZoom = 60; // 모바일에서 60%로 시작
         } else {
             currentZoom = 100; // 데스크톱에서 100%
         }
@@ -470,7 +470,7 @@ function zoomOut() {
 
 function resetZoom() {
     if (window.innerWidth <= 768) {
-        currentZoom = 50; // 모바일에서 50%
+        currentZoom = 60; // 모바일에서 60%
     } else {
         currentZoom = 100; // 데스크톱에서 100%
     }
