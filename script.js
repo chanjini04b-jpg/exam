@@ -438,4 +438,34 @@ function closePdfModal() {
     
     pdfModal.style.display = 'none';
     pdfViewer.src = ''; // PDF 로드 중지
+    resetZoom(); // 줌 레벨 초기화
+}
+
+// PDF 줌 기능
+let currentZoom = 100;
+
+function zoomIn() {
+    if (currentZoom < 200) {
+        currentZoom += 10;
+        updateZoom();
+    }
+}
+
+function zoomOut() {
+    if (currentZoom > 50) {
+        currentZoom -= 10;
+        updateZoom();
+    }
+}
+
+function resetZoom() {
+    currentZoom = 100;
+    updateZoom();
+}
+
+function updateZoom() {
+    const pdfWrapper = document.getElementById('pdf-wrapper');
+    const zoomLevel = document.getElementById('zoom-level');
+    pdfWrapper.style.transform = `scale(${currentZoom / 100})`;
+    zoomLevel.textContent = `${currentZoom}%`;
 }

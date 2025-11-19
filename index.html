@@ -217,10 +217,18 @@
         <div class="pdf-modal-content">
             <div class="pdf-modal-header">
                 <h3 id="pdf-title">정답 보기</h3>
+                <div class="pdf-controls">
+                    <button class="pdf-control-btn" onclick="zoomOut()" title="축소">-</button>
+                    <span class="zoom-level" id="zoom-level">100%</span>
+                    <button class="pdf-control-btn" onclick="zoomIn()" title="확대">+</button>
+                    <button class="pdf-control-btn" onclick="resetZoom()" title="원래 크기">⟲</button>
+                </div>
                 <button class="pdf-close-btn" onclick="closePdfModal()">&times;</button>
             </div>
             <div class="pdf-modal-body">
-                <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+                <div id="pdf-wrapper" class="pdf-wrapper">
+                    <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
     </div>
