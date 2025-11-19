@@ -478,10 +478,11 @@ function resetZoom() {
 }
 
 function updateZoom() {
-    const pdfWrapper = document.getElementById('pdf-wrapper');
+    const pdfViewer = document.getElementById('pdf-viewer');
     const zoomLevel = document.getElementById('zoom-level');
-    if (pdfWrapper && zoomLevel) {
-        pdfWrapper.style.transform = `scale(${currentZoom / 100})`;
+    if (pdfViewer && zoomLevel) {
+        pdfViewer.style.transform = `scale(${currentZoom / 100})`;
+        pdfViewer.style.transformOrigin = 'top center';
         zoomLevel.textContent = `${currentZoom}%`;
     }
 }
