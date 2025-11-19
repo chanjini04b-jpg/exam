@@ -59,6 +59,14 @@ function selectRound(round) {
         return;
     }
     
+    // 모바일 메뉴 닫기
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.querySelector('.mobile-overlay');
+    if (sidebar && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+    }
+    
     // 문제풀이 섹션으로 이동
     document.querySelectorAll('.content-section').forEach(section => {
         section.classList.remove('active');
@@ -380,3 +388,22 @@ window.onload = function() {
         console.log('데이터 로드 완료:', Object.keys(roundData).length + '개 회차');
     }
 };
+
+// 모바일 메뉴 토글
+function toggleMobileMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+    
+    sidebar.classList.toggle('active');
+    
+    // 오버레이 생성/제거
+    let overlay = document.querySelector('.mobile-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'mobile-overlay';
+        overlay.onclick = toggleMobileMenu;
+        body.appendChild(overlay);
+    }
+    
+    overlay.classList.toggle('active');
+}

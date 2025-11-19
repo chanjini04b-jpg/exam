@@ -916,4 +916,192 @@ body {
     .round-card {
         padding: 1.5rem 1rem;
     }
+    
+    /* 모바일 사이드바 */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        min-width: 250px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .sidebar:hover {
+        width: 250px;
+    }
+    
+    .sidebar-header h2,
+    .sidebar-footer {
+        opacity: 1;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    /* 햄버거 메뉴 버튼 */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40px;
+        height: 40px;
+        background: #667eea;
+        border: none;
+        border-radius: 8px;
+        padding: 8px;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 999;
+    }
+    
+    .mobile-menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* 사이드바 닫기 버튼 */
+    .mobile-menu-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        line-height: 1;
+        z-index: 1001;
+    }
+    
+    /* 모바일 오버레이 */
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+    
+    .mobile-overlay.active {
+        display: block;
+    }
+    
+    /* 홈 화면 모바일 */
+    .home-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .update-notice {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .notice-icon {
+        font-size: 1.2rem;
+    }
+    
+    /* 퀴즈 섹션 모바일 */
+    .quiz-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .score-display-header {
+        font-size: 1rem;
+    }
+    
+    .score-display-header strong {
+        font-size: 1.2rem;
+    }
+    
+    .question-nav {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+        padding: 0.8rem;
+    }
+    
+    .question-number-btn {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .quiz-header-info {
+        margin-bottom: 1rem;
+    }
+    
+    .round-info {
+        font-size: 0.9rem;
+    }
+    
+    .question-text {
+        font-size: 0.95rem;
+    }
+    
+    .option-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .check-button, .next-button {
+        width: 100%;
+    }
+    
+    .explanation {
+        padding: 0.8rem;
+    }
+    
+    /* 모달 모바일 */
+    .modal-content {
+        width: 95%;
+        max-width: 95%;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .modal-body p {
+        font-size: 0.95rem;
+    }
+    
+    .modal-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 데스크톱에서 모바일 전용 요소 숨김 */
+@media (min-width: 769px) {
+    .mobile-menu-toggle,
+    .mobile-menu-close,
+    .mobile-overlay {
+        display: none;
+    }
 }
